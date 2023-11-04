@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>God's EYE: Phishing Detector</title>
+  <style>
+    body {
+      width: 300px;
+      min-height: 200px;
+      padding: 10px;
+      background: linear-gradient(to right, #8c5959, #57bcd8);
+      }
+      
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    ul {
+      margin-top: 10px;
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .url-input {
+      width: 200px;
+    }
+
+    .add-btn {
+      margin-left: 10px;
+    }
+
+    .whitelist-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .whitelist-item .url {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+
+    .remove-btn {
+      cursor: pointer;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>God's EYE: Phishing Detector</h1>
+  <h2>Status: <span id="status">Checking</span></h2>
+
+  <form id="whitelist-form">
+    <label for="url-input">URL:</label>
+    <input type="text" id="url-input" class="url-input" required>
+    <button type="submit" class="add-btn">Add</button>
+  </form>
+
+  <h3>Whitelist</h3>
+  <ul id="whitelist">
+    <!-- Whitelist items will be dynamically added here -->
+  </ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>
